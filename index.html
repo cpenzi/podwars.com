@@ -147,7 +147,7 @@ Extend recent episodes to span both columns. Create two columns within that box 
 $(document).ready(function() {
 
    var people = [];
-
+    alert("Testing")
    $.getJSON('episodes.json', function(data) {
        $.each(data.episode, function(i, f) {
           var tblRow = "<div class=\"episode_Widget\">" + "<h2>img class=\"img\" src=" + f.image + "\" width=\"150\" height=\"150\"> " 
