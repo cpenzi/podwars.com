@@ -151,7 +151,7 @@ $(document).ready(function() {
    $.getJSON('episodes.json', function(data) {
        $.each(data.episodes, function(i, f) {
         alert("in the foreach loop")
-          var tblRow = "<div class=\"episode_Widget\">" + "<h2>img class=\"img\" src=\"" + f.image + "\" width=\"150\" height=\"150\"> " 
+          var tblRow = "<div class=\"episode_Widget\">" + "<h2><img class=\"img\" src=\"" + f.image + "\" width=\"150\" height=\"150\"> " 
           + f.title
           + "<hr style=\" margin: 2px;\" color=\"black\">"
           + "<p> "
