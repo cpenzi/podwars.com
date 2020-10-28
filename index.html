@@ -139,3 +139,49 @@ Extend recent episodes to span both columns. Create two columns within that box 
 </body>
 
 </html>
+
+
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"> </script>
+<script>
+
+$(function() {
+
+   var people = [];
+
+   $.getJSON('episodes.json', function(data) {
+       $.each(data.episode, function(i, f) {
+          var tblRow = "<div class=\"episode_Widget\">" + "<h2>img class=\"img\" src=" + f.image + "\" width=\"150\" height=\"150\"> " 
+          + f.title
+          + "<hr style=\" margin: 2px;\" color=\"black\">"
+          + "<p> "
+          + f.description
+          + "</p> </h2>"
+          + "<div class =\"episode_DateTime\">" + f.dateTime + "\"<div>"
+           $(tblRow).appendTo("#grd_col flex-container"); 
+     });
+
+   });
+
+});
+</script>
+
+
+<!--
+    f.number
+    f.title
+    f.description
+    f.dateTime
+    f.image
+
+
+<div class="episode_Widget">
+<h2><img class="img" src="img/SoPadme_ep.jpg" width="150" height="150">
+    title
+    <hr style=" margin: 2px;" color="black">
+    <p>
+        description
+    </p>
+</h2>
+<div class="date</div>
+</div>
+-->
