@@ -54,7 +54,7 @@ Extend recent episodes to span both columns. Create two columns within that box 
             <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
         </div>
 
-        <section class="grd_col flex-container" style="background:#5e5e5e">
+        <section class="grd_col flex-container" id="gridWidgets" style="background:#5e5e5e">
             <div class="episode_Widget">
                 <h2><img class="img" src="img/SoPadme_ep.jpg" width="150" height="150">
                     So Padme, why did you choose Anakin? Feat. Comic Books Couples Counseling
@@ -158,7 +158,7 @@ $(document).ready(function() {
           + f.description
           + "</p> </h2>"
           + "<div class =\"episode_DateTime\">" + f.dateTime + "\"<div>"
-           $(tblRow).appendTo("#grd_col flex-container"); 
+           $(tblRow).appendTo("#gridWidgets"); 
      });
 
    });
