@@ -21,7 +21,7 @@
     <section class="header-title">
         <div class="container">
             <h1 class="title">Pod Wars Podcast
-                <span>"We are a podcast that dissects Star Wars, Marvel, and geeky media, while introducing you to
+                <span>"Dissecting Star Wars, Marvel, and geeky media, while introducing you to
                     created works that interest us."</span>
             </h1>
             <a href="" class="button button-accent">See Our Work</a>
@@ -150,15 +150,14 @@ $(document).ready(function() {
     
    $.getJSON('episodes.json', function(data) {
        $.each(data.episodes, function(i, f) {
-        alert("in the foreach loop")
-          var tblRow = "<div class=\"episode_Widget\">" + "<h2><img class=\"img\" src=\"" + f.image + "\" width=\"150\" height=\"150\"> " 
+          var episode = "<div class=\"episode_Widget\">" + "<h2><img class=\"img\" src=\"" + f.image + "\" width=\"150\" height=\"150\"> " 
           + f.title
           + "<hr style=\" margin: 2px;\" color=\"black\">"
           + "<p> "
           + f.description
           + "</p> </h2>"
           + "<div class =\"episode_DateTime\">" + f.dateAndTime + "<div>"
-           $(tblRow).appendTo("#gridWidgets"); 
+           $(episode).appendTo("#gridWidgets"); 
      });
 
    });
