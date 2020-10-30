@@ -331,6 +331,10 @@ p:last-of-type{
     .title{
         font-size: 3.7rem;
     } 
+    .episode_Widget{
+        width: 95vw;
+        height: min-content;
+    }
 }
 
 
