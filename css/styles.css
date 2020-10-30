@@ -297,7 +297,7 @@ p:last-of-type{
     margin-bottom:  0;
 }
 
-@media(max-width: 50rem){
+@media(max-width: 250rem){
     .flex-container{
         grid-row-start: 3;
         grid-row-end: 3;
@@ -338,6 +338,9 @@ p:last-of-type{
     .episode_Widget{
         width: 95vw;
         height: min-content;
+    }
+    .container span{
+        display: none;
     }
 }
 
