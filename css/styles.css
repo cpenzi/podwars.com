@@ -297,7 +297,7 @@ p:last-of-type{
     margin-bottom:  0;
 }
 
-@media(min-width: 20px){
+@media(min-width: 0px){
     .flex-container{
         grid-row-start: 3;
         grid-row-end: 3;
