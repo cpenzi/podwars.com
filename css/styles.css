@@ -6,7 +6,11 @@ url('https://fonts.googleapis.com/css?family=Raleway:300,400,700,900');
     box-sizing: border-box;
    
 }
-
+body{
+    
+        height:100vh;
+        width: 100vh;
+}
 .fa {
     padding: 10px;
     width: auto;
@@ -378,12 +382,7 @@ nav a:focus{
 }
 
 @media(min-width: 60rem){
-    .logo{
-        float:left;
-    } 
-    nav{
-       float: right; 
-    }
+
 }
 
 /*home-hero
@@ -405,7 +404,7 @@ nav a:focus{
     
 }
 
-@media(min-width: 60em){
+@media(min-width: 10em){
     .header-title{
         height: 100vh;
         padding-top: 35vh;
