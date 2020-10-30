@@ -47,6 +47,10 @@ url('https://fonts.googleapis.com/css?family=Raleway:300,400,700,900');
     grid-template-columns: 1fr 2.5fr;
   }
 
+  .episodeDetails {
+    width: 100%;
+    text-align: center;
+  }
   .episode_Widget:last-child {
     align-self: flex-end;
   }
@@ -61,6 +65,7 @@ url('https://fonts.googleapis.com/css?family=Raleway:300,400,700,900');
     grid-row-end: 3;
     grid-column-start: 2;
     grid-column-end: 2;
+    
 
 }
 .episode_Widget img{
