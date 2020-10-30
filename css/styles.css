@@ -36,14 +36,12 @@ url('https://fonts.googleapis.com/css?family=Raleway:300,400,700,900');
     background: #b03a3a;
     padding: 20px; 
     margin: 2px;
-    width: 550px;
-    height: 200px;  
+    width: 100vw;  
+    height: 600px;
     margin: 10px;
     text-align: center;
     padding: 20px 0;
-    font-size: 30px;
-    position:relative;
-    grid-template-columns: 1fr 2.5fr;
+    font-size: 15px;
   }
 
   .episode_Widget:last-child {
