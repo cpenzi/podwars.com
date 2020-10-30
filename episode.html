@@ -114,10 +114,15 @@ Extend recent episodes to span both columns. Create two columns within that box 
     }
 
 
+    var episodes = [];
+    $.getJSON('episodes.json', function(data) {
+       $.each(data.episodes, function(i, f) {
+           episodes.add(f);
+     });
 
-    $(document).ready(function() {
-        var mydata = JSON.parse(episodes);
-        alert(mydata[0].name);  
+     episodes.forEach(function(item) {
+        alert(item);
+    });
 
     });
 </script>
