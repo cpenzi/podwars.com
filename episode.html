@@ -100,7 +100,7 @@ Extend recent episodes to span both columns. Create two columns within that box 
 
 </html>
 
-
+<script type="text/javascript" src="episodes.json"></script>
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"> </script>
 
 
@@ -116,10 +116,8 @@ Extend recent episodes to span both columns. Create two columns within that box 
 
 
     $(document).ready(function() {
-        $.getJSON( 'episodes.json', function( data ) {
-        var items = data.episodes.items.map(function (item) {
-        console.log( item.key + ': ' + item.value);
-        });
-        });
+        var mydata = JSON.parse(episodes.episodes);
+        alert(mydata[0].name);  
+
     });
 </script>
