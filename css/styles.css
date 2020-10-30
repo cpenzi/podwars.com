@@ -6,6 +6,7 @@ url('https://fonts.googleapis.com/css?family=Raleway:300,400,700,900');
     box-sizing: border-box;
    
 }
+
 .fa {
     padding: 10px;
     width: auto;
@@ -36,12 +37,14 @@ url('https://fonts.googleapis.com/css?family=Raleway:300,400,700,900');
     background: #b03a3a;
     padding: 20px; 
     margin: 2px;
-    width: 100vw;  
-    height: 600px;
+    width: 550px;
+    height: 200px;  
     margin: 10px;
     text-align: center;
     padding: 20px 0;
-    font-size: 15px;
+    font-size: 30px;
+    position:relative;
+    grid-template-columns: 1fr 2.5fr;
   }
 
   .episode_Widget:last-child {
@@ -294,7 +297,7 @@ p:last-of-type{
     margin-bottom:  0;
 }
 
-@media(min-width: 0px){
+@media(max-width: 50rem){
     .flex-container{
         grid-row-start: 3;
         grid-row-end: 3;
@@ -328,19 +331,6 @@ p:last-of-type{
     .title{
         font-size: 3.7rem;
     } 
-    .episode_Widget {
-        border-radius: 25px;
-        background: #b03a3a;
-        padding: 20px; 
-        margin: 2px;
-        width: 100vw;  
-        height: 600px;
-        margin: 10px;
-        text-align: center;
-        padding: 20px 0;
-        font-size: 15px;
-
-      }
 }
 
 
