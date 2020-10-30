@@ -335,7 +335,8 @@ p:last-of-type{
         background: #b03a3a;
         padding: 20px; 
         margin: 2px;
-        width: 80vw;  
+        width: 100vw;  
+        height:auto
         margin: 10px;
         text-align: center;
         padding: 20px 0;
