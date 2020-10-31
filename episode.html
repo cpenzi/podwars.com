@@ -50,9 +50,7 @@ Extend recent episodes to span both columns. Create two columns within that box 
         </div>
         <section class="grd_col flex-container" id="gridWidgets" style="background:#5e5e5e">
             <div class="episodeDetails">
-                <h1>TITLE HERE</h1>
-                <hr>
-                <p>Some random text goes here</p>
+
             </div>
 
         </section>
@@ -122,7 +120,7 @@ Extend recent episodes to span both columns. Create two columns within that box 
         const queryString = window.location.search;
         const urlParams = new URLSearchParams(queryString);  
         const episodeNumber = urlParams.get('episodeNum')
-        alert(episodeNumber);
+        alert(episodes[parseInt(episodeNumber)].description);
 
         var episode = "<h1>" + episodes[parseInt(episodeNumber)].title + "</h1> " +
                 "<hr>" +
