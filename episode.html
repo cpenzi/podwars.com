@@ -50,7 +50,9 @@ Extend recent episodes to span both columns. Create two columns within that box 
         </div>
         <section class="grd_col flex-container" id="gridWidgets" style="background:#5e5e5e">
             <div class="episodeDetails">
-
+                <h1>TITLE HERE</h1>
+                <hr>
+                <p>Some random text goes here</p>
             </div>
 
         </section>
@@ -103,18 +105,25 @@ Extend recent episodes to span both columns. Create two columns within that box 
 
 
 <script>
+    
+    var episodes = [];
+    $.getJSON('episodes.json', function(data) {
+       $.each(data.episodes, function(i, f) {
+           episodes.push(f);
+     });
+
+     episodes.forEach(function(item) {
+        alert(item.image);
+    });
+
+    });
+    
     window.onload = function(){
         const queryString = window.location.search;
         const urlParams = new URLSearchParams(queryString);  
         const episodeNumber = urlParams.get('episodeNum')
         alert(episodeNumber);
-        var episodes = [];
-       $.getJSON('episodes.json', function(data) {
-       $.each(data.episodes, function(i, f) {
-           episodes.push(f);
-        });
-       });
-       alert(episodeNumber);
+
         var episode = "<h1>" + episodes[parseInt(episodeNumber)].title + "</h1> " +
                 "<hr>" +
                 "<p>" + episodes[parseInt(episodeNumber)].description  + "</p>";
@@ -124,5 +133,7 @@ Extend recent episodes to span both columns. Create two columns within that box 
 
 
     }
+
+
 
 </script>
