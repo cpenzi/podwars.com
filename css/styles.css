@@ -307,7 +307,7 @@ p:last-of-type{
 
 
 
-@media  screen and (min-width: 0px) {
+@media  screen and (max-width: 800px) {
     .flex-container{
         grid-row-start: 3;
         grid-row-end: 3;
