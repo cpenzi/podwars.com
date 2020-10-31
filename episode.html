@@ -114,9 +114,9 @@ Extend recent episodes to span both columns. Create two columns within that box 
            episodes.push(f);
         });
        });
-        var episode = "<h1>" + episodes[episodeNumber].title + "</h1> " +
+        var episode = "<h1>" + episodes[parseInt(episodeNumber)].title + "</h1> " +
                 "<hr>" +
-                "<p>" + episodes[episodeNumber].description  + "</p>";
+                "<p>" + episodes[parseInt(episodeNumber)].description  + "</p>";
            $(episode).appendTo("#episodeDetails"); 
 
 
