@@ -305,7 +305,7 @@ p:last-of-type{
     margin-bottom:  0;
 }
 
-@media only screen and (max-width: 200px) {
+@media only screen and (max-width: 850px) {
     .flex-container{
         grid-row-start: 3;
         grid-row-end: 3;
@@ -317,6 +317,7 @@ p:last-of-type{
     }
     .grd_3point{
         grid-template-columns: 1fr;
+        grid-template-rows: auto, auto, auto;
         width: 95vw;
 
     }
