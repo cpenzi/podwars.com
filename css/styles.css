@@ -180,8 +180,8 @@ url('https://fonts.googleapis.com/css?family=Raleway:300,400,700,900');
     border-radius: 25px;
     background-repeat: no-repeat;
     background-size: cover;
-    height: 48px;
-    width: 48px;
+    height: 45px;
+    width: 45px;
 }
 
 .socialMedia_Twitter{
@@ -190,10 +190,17 @@ url('https://fonts.googleapis.com/css?family=Raleway:300,400,700,900');
     background-image: url(../img/twitterIcon.svg);
 }
 .PodcastLinks_Spotify{
-    
+    margin-top: 30px;
     padding: 20px;
     background-image: url(../img/Spotify_logo.svg);
-
+}
+.PodcastLinks_Anchor{
+    padding: 20px;
+    background-image: url(../img/anchor_logo.svg);
+}
+.PodcastLinks_Apple{
+    padding: 20px;
+    background-image: url(../img/ApplePodcast_logo.svg);   
 }
 .socialMedia_Facebook{
     padding: 24px;
