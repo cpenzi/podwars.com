@@ -1,6 +1,11 @@
 @import
 url('https://fonts.googleapis.com/css?family=Raleway:300,400,700,900');
 
+@font-face {
+    font-family: 'starWarsFont';
+    src: url('../fonts/star_jedi/starjedi/Starjhol.ttf'); /* IE6-IE8 */
+  }
+
 /* Applies to all elements */
 *{
     box-sizing: border-box;
@@ -45,9 +50,14 @@ url('https://fonts.googleapis.com/css?family=Raleway:300,400,700,900');
     font-size: 30px;
     position:relative;
     grid-template-columns: 1fr 2.5fr;
-    overflow: scroll;
   }
 
+  .lightBackground{
+      background-color: black;
+      padding: 5px;
+      border-radius: 50px;
+      background: rgba(0, 0, 0, 0.5);
+  }
   .episodeDetails {
     width: 100%;
     text-align: center;
@@ -68,8 +78,6 @@ url('https://fonts.googleapis.com/css?family=Raleway:300,400,700,900');
     grid-column-end: 2;
     max-height: 1400px;
     overflow: scroll;
-    
-
 }
 .episode_Widget img{
     float: left;
@@ -298,7 +306,8 @@ h2{
 .title{
     font-size: 2.5em;
     font-weight: 900;
-    
+    font-family: 'starWarsFont', Fallback, sans-serif;
+    color: yellow
 }
 
 .title span{
