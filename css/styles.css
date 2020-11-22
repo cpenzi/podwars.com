@@ -200,31 +200,31 @@ url('https://fonts.googleapis.com/css?family=Raleway:300,400,700,900');
     width: 45px;
 }
 
-.socialMedia_Twitter{
 
-    border: 4px solid transparent;
-    background-image: url(../img/twitterIcon.svg);
-}
 .PodcastLinks_Spotify{
     margin-top: 30px;
 
-    background-image: url(../img/Spotify_logo.svg);
+    background-image: url(../img/PodcastSite_Logos/Spotify_logo.svg);
 }
 .PodcastLinks_Anchor{
 
-    background-image: url(../img/anchor_logo.svg);
+    background-image: url(../img/PodcastSite_Logos/anchor_logo.svg);
 }
 .PodcastLinks_Apple{
 
-    background-image: url(../img/ApplePodcast_logo.svg);   
+    background-image: url(../img/PodcastSite_Logos/ApplePodcast_logo.svg);   
 }
 .socialMedia_Facebook{
 
-    background-image: url(../img/facebookIcon.svg);
+    background-image: url(../img/SocialMedia_Logos/facebookIcon.svg);
 }
 .socialMedia_Instagram{
 
-    background-image: url(../img/instagramIcon.svg);
+    background-image: url(../img/SocialMedia_Logos/instagramIcon.svg);
+}
+.socialMedia_Twitter{
+    border: 4px solid transparent;
+    background-image: url(../img/SocialMedia_Logos/twitterIcon.svg);
 }
 .smallButton{
     height: 40px;
@@ -468,7 +468,7 @@ nav a:focus{
 ===================*/
 
 .header-title{
-    background-image: url(../img/test.jpeg);
+    background-image: url(../img/MainBackground_Image.jpeg);
     background-size: cover;
     max-height: 600px;
     background-position:  center top;
