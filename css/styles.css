@@ -116,6 +116,8 @@ url('https://fonts.googleapis.com/css?family=Raleway:300,400,700,900');
     color: white;
     font-size: 12px;
     text-align: left;
+    overflow: scroll;
+    max-height: 96px;
 }
 
 .episode_Widget h2{

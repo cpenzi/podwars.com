@@ -120,7 +120,7 @@ Extend recent episodes to span both columns. Create two columns within that box 
         const queryString = window.location.search;
         const urlParams = new URLSearchParams(queryString);  
         const episodeNumber = urlParams.get('episodeNum')
-
+        alert(episodes[parseInt(episodeNumber)].image);
         var episode = "<h1>" + episodes[parseInt(episodeNumber)].title + "</h1> " +
                 "<hr> <section class=\"DescSection\">" +
                 "<img class=\"img\" src=\"" + episodes[parseInt(episodeNumber)].image + "\" alt=\"Episode " + parseInt(episodeNumber)  + "\" width=\"150\" height=\"150\"> "
