@@ -70,8 +70,6 @@ Extend recent episodes to span both columns. Create two columns within that box 
                 <hr>
                 <iframe class="latestEpisode details" src="https://open.spotify.com/embed-podcast/episode/3vvMim3nkBZDJYf7BNjbWi" width="100%" height="160px" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
             </div>
-
-
         </section>
     </div>
 
@@ -136,11 +134,28 @@ Extend recent episodes to span both columns. Create two columns within that box 
         const episodeNumber = urlParams.get('episodeNum')
 
         var episode = "<h1>" + episodes[parseInt(episodeNumber)].title + "</h1> " +
-                "<hr>" +
-                "<p>" + episodes[parseInt(episodeNumber)].description  + "</p>";
+                "<hr> <section class=\"DescSection\">" +
+                "<img class=\"img\" src=\"" + episodes[parseInt(episodeNumber)].image + " alt=\"Episode " + parseInt(episodeNumber)  + "\" width=\"150\" height=\"150\"> "
+                "<p>" + episodes[parseInt(episodeNumber)].description  + "</p>" +
+                " </section> <hr> <iframe class=\"latestEpisode details\" src=\"" + episodes[parseInt(episodeNumber)].spotifyLink + "\" width=\"100%\" height=\"160px\" frameborder=\"0\" allowtransparency=\"true\" allow=\"encrypted-media\"></iframe>"            
+                ;
            $(episode).appendTo("#episodeDetails"); 
     }
 
-
-
 </script>
+
+<!--
+<h1> This is a title of one of the podcast. It goes here  </h1>  
+                <hr>
+                <section class="DescSection">
+                <img class="img" src="img/MarvelPodcastInterview.jpg" alt="Episode 39" width="150" height="150">
+                    <p>This week Gary and Justus interview lead makeup artist Sarit Klein. We talk makeup, blood, scars,
+                        bruises, tattoos, facial hair, glitz and glam. We dive deep into the development of different
+                        characters and visual aesthetics for the Marvel Netflix shows like Daredevil, Jessica Jones,
+                        Luke Cage, and The Defenders.
+                        We also talk about zombies and vampires.
+                    </p>
+                </section>
+                <hr>
+                <iframe class="latestEpisode details" src="https://open.spotify.com/embed-podcast/episode/3vvMim3nkBZDJYf7BNjbWi" width="100%" height="160px" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+-->
