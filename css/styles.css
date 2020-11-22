@@ -368,6 +368,8 @@ p:last-of-type{
         grid-column-end: 1;
         vertical-align: middle;
         width: 95vw;
+        height: fit-content;
+        overflow: none;
 
     }
     .grd_3point{
