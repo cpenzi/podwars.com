@@ -369,7 +369,7 @@ p:last-of-type{
         vertical-align: middle;
         width: 95vw;
         height: fit-content;
-        overflow: none;
+        max-height: fit-content;
 
     }
     .grd_3point{
