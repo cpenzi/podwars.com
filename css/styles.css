@@ -12,31 +12,7 @@ url('https://fonts.googleapis.com/css?family=Raleway:300,400,700,900');
    
 }
 
-.fa {
-    padding: 10px;
-    width: auto;
-    text-align: center;
-    text-decoration: none;
-    margin: 5px 2px;
-    border-radius: 50%;
-    
-  }
-  
-  .fa:hover {
-      opacity: 0.7;
-  }
-  
-  .fa-facebook {
-    background: #3B5998;
-    color: white;
-    ;
-  }
-  
-  .fa-twitter {
-    background: #55ACEE;
-    color: white;
-  }
-
+/* Main widget on index.html page */
 .episode_Widget {
     border-radius: 25px;
     background: #b03a3a;
@@ -52,66 +28,16 @@ url('https://fonts.googleapis.com/css?family=Raleway:300,400,700,900');
     grid-template-columns: 1fr 2.5fr;
     overflow: hidden;
   }
-
-  .lightBackground{
-      background-color: black;
-      padding: 5px;
-      border-radius: 50px;
-      background: rgba(0, 0, 0, 0.5);
-  }
-  .episodeDetails {
-    width: 100%;
-    text-align: center;
-    margin-bottom: 20px;
-  }
-  .details{
-      margin: 10px;
-  }
+  
+  .episode_Widget img{
+    float: left;
+    padding-right: 7px;
+    padding-left: 7px;  
+}
   .episode_Widget:last-child {
     align-self: flex-end;
   }
-.flex-container{
-    display: flex;
-    background-color: #2196F3;
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-content: flex-start;
-    grid-row-start: 1;
-    grid-row-end: 3;
-    grid-column-start: 2;
-    grid-column-end: 2;
-    max-height: 1400px;
-    overflow: scroll;
-}
-.episode_Widget img{
-    float: left;
-    padding-right: 7px;
-    padding-left: 7px;
-    
-}
-.episodeDetails img{
-    float: left;
-    padding-right: 7px;
-    padding-left: 7px;
-    height: 250px;
-    width: 250px;
-    border-radius: 50px;
-    padding: 7px;
-}
-.DescSection{
-    display: flex;
-    align-items:center;
-}
-
-.episode_duration img{
-    text-align: right;
-    top: -17px;
-    right: 10px;
-    font-size: 15px;
-    float: none;
-    
-}
-.episode_Widget p{
+  .episode_Widget p{
     color: white;
     font-size: 12px;
     text-align: left;
@@ -131,15 +57,72 @@ url('https://fonts.googleapis.com/css?family=Raleway:300,400,700,900');
     color: black;
     font-weight: bold;  
 }
-.episode_Widget h6{
-    font-size: 15px;
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    padding-right: 10px;
-    margin: 10px;
 
+
+  /* Background box behind title */
+  .title_background{
+      background-color: black;
+      padding: 5px;
+      border-radius: 50px;
+      background: rgba(0, 0, 0, 0.5);
+  }
+
+  /* Details of epsiode on episode.html*/
+  .episodeDetails {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+.episodeDetails img{
+    float: left;
+    padding-right: 7px;
+    padding-left: 7px;
+    height: 175px;
+    width: 175px;
+    border-radius: 50px;
+    padding: 7px;
 }
+.aboutUsDesc{
+    width: 32%;
+    text-align: center;
+    margin-bottom: 20px;
+    margin-right: 10px;
+}
+.aboutUsDesc p{
+    padding: 10px;
+}
+.aboutUsDesc img{
+    float: top;
+    padding-right: 7px;
+    padding-left: 7px;
+    height: 175px;
+    width: 175px;
+    border-radius: 50px;
+    padding: 7px;
+}
+
+/* Containers that contains items listed in rows*/
+.flex-container{
+    display: flex;
+    background-color: #2196F3;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    grid-row-start: 1;
+    grid-row-end: 3;
+    grid-column-start: 2;
+    grid-column-end: 2;
+    max-height: 1400px;
+    overflow: scroll;
+}
+
+.DescSection{
+    display: flex;
+    align-items:center;
+}
+
+
 .episode_DateTime {
     font-size: 15px;
     position: absolute;
@@ -242,13 +225,7 @@ url('https://fonts.googleapis.com/css?family=Raleway:300,400,700,900');
     display: table;
     width: 100%;
 }
-body{
-    margin: 0;
-    font-family: 'Raleway', sans-serif;
-    text-align: center;
-    background-color: #171717;
-    
-}
+
 
 
 .clearfix::after,
@@ -274,8 +251,12 @@ footer::after{
 
 body{
     margin:0px;
-padding:0px;
-width:100%;
+    padding:0px;
+    width:100%;
+    margin: 0;
+    font-family: 'Raleway', sans-serif;
+    text-align: center;
+    background-color: #171717;
 }
 
 
@@ -412,6 +393,10 @@ p:last-of-type{
     .container span{
         display: none;
     }
+    .aboutUsDesc{
+        width: 100%;
+
+    }
 }
 
 
@@ -458,15 +443,9 @@ nav a:focus{
     color: #DDD;
 }
 
-@media(min-width: 60rem){
-
-}
 
 /*home-hero
 ===================*/
-
-
-
 
 .header-title{
     background-image: url(../img/test.jpeg);
@@ -497,10 +476,6 @@ nav a:focus{
         font-size: 2rem;;
     }
 
-    .home-about-textbox h1{
-        top:.6em;
-        padding:0 .325em;
-    }
 }
 
 
@@ -535,19 +510,6 @@ nav a:focus{
 
 .port-desc p{
     margin: 1em;
-}
-
-
-
-
-
- 
-/*CTA
-===================*/
-
-.cta{
-    background-color: #00ff6c;
-    padding: 5em 0;
 }
 
 /*Footer
