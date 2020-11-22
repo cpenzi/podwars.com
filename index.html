@@ -290,8 +290,10 @@ $(document).ready(function() {
     
    $.getJSON('episodes.json', function(data) {
        $.each(data.episodes, function(i, f) {
-          var episode = "<div class=\"episode_Widget\">" + "<h2><img class=\"img\" src=\"" + f.image + "\" width=\"150\" height=\"150\"> " 
+          var episode = "<div class=\"episode_Widget\">" + "<h2><a href=\"episode.html?episodeNum=" + f.number + "\"> <img class=\"img\" src=\"" + f.image + "\" width=\"150\" height=\"150\"></a> " 
+          + "<a href=\"episode.html?episodeNum=" + f.number + " style=\"text-decoration: none\">"
           + f.title
+          + "</a> "
           + "<hr style=\" margin: 2px;\" color=\"black\">"
           + "<p> "
           + f.description
@@ -306,33 +308,18 @@ $(document).ready(function() {
 </script>
 
 
-<!--
-                    <h1>TITLE HERE</h1>
-                <hr>
-                <p>Some random text goes here</p>
-    f.number
-    f.title
-    f.description
-    f.dateTime
-    f.image
-
-
-<div class="episode_Widget">
-<h2><img class="img" src="img/SoPadme_ep.jpg" width="150" height="150">
-    title
-    <hr style=" margin: 2px;" color="black">
-    <p>
-        description
-    </p>
-</h2>
-<div class="date</div>
-</div>
-
-
-
-
-        var episode = "<h1>" + episodes[parseInt(episodeNumber)].title + "</h1> " +
-                "<hr>" +
-                "<p>" + episodes[parseInt(episodeNumber)].description  + "</p>";
-           $(episode).appendTo("#episodeDetails"); 
+            <!-- 
+            <div class="episode_Widget">
+                <h2><a href="episode.html?episodeNum=1"><img class="img" src="img/SoPadme_ep.jpg" width="150" height="150"></a>
+                    <a href="episode.html?episodeNum=1" style="text-decoration: none">So Padme, why did you choose Anakin? Feat. Comic Books Couples Counseling</a>
+                    <hr style=" margin: 2px;" color="black">
+                    <p>The "Comic Books Couples Counseling" podcast joins Pod Wars to help perform a counseling session
+                        for Anakin and Padme!
+                        We use the enneagram to dissect the personality traits of these characters, allowing us to look
+                        at everything course, rough, and irritating with their relationship.
+                        Expect plenty of sand, dead younglings, and aggressive negotiations
+                    </p>
+                </h2>
+                <div class="episode_DateTime">10/23/20 | 1hr 35min</div>
+            </div>
 -->
