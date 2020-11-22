@@ -61,6 +61,10 @@ url('https://fonts.googleapis.com/css?family=Raleway:300,400,700,900');
   .episodeDetails {
     width: 100%;
     text-align: center;
+    margin: 10px;
+  }
+  .details{
+      margin: 10px;
   }
   .episode_Widget:last-child {
     align-self: flex-end;
@@ -84,6 +88,19 @@ url('https://fonts.googleapis.com/css?family=Raleway:300,400,700,900');
     padding-right: 7px;
     padding-left: 7px;
     
+}
+.episodeDetails img{
+    float: left;
+    padding-right: 7px;
+    padding-left: 7px;
+    height: 250px;
+    width: 250px; 
+    border-radius: 20px;
+    padding-bottom: 7px;
+}
+.DescSection{
+    display: flex;
+    align-items:center;
 }
 
 .episode_duration img{
@@ -230,10 +247,7 @@ body{
     background-color: #171717;
     
 }
-img{
-    max-width: auto;
-    max-height: auto;    /* This was added after */
-}
+
 
 .clearfix::after,
 section::after,
