@@ -50,6 +50,7 @@ url('https://fonts.googleapis.com/css?family=Raleway:300,400,700,900');
     font-size: 30px;
     position:relative;
     grid-template-columns: 1fr 2.5fr;
+    overflow: hidden;
   }
 
   .lightBackground{
