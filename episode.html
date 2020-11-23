@@ -110,16 +110,22 @@ Extend recent episodes to span both columns. Create two columns within that box 
     });
     
     window.onload = function(){
+    
         const queryString = window.location.search;
         const urlParams = new URLSearchParams(queryString);  
         const episodeNumber = urlParams.get('episodeNum') ;
-        var episode = "<h1>" + episodes[parseInt(episodeNumber)].title + "</h1> " +
+
+        for (var i = 0; i < episodes.length; i++) {
+        if (episodes[i].episodeNumber == episodeNumber) {
+            var episode = "<h1>" + episodes[i].title + "</h1> " +
                 "<hr> <section class=\"DescSection\">" +
-                "<img class=\"img\" src=\"" + episodes[parseInt(episodeNumber)].image + "\" alt=\"Episode " + parseInt(episodeNumber)  + "\" width=\"150\" height=\"150\"> " +
+                "<img class=\"img\" src=\"" + episodes[i].image + "\" alt=\"Episode " + parseInt(episodeNumber)  + "\" width=\"150\" height=\"150\"> " +
                 "<p>" + episodes[parseInt(episodeNumber)].description  + "</p>" +
-                " </section> <hr> <iframe class=\"latestEpisode details\" src=\"" + episodes[parseInt(episodeNumber)].spotifyLink + "\" width=\"100%\" height=\"160px\" frameborder=\"0\" allowtransparency=\"true\" allow=\"encrypted-media\"></iframe>"            
+                " </section> <hr> <iframe class=\"latestEpisode details\" src=\"" + episodes[i].spotifyLink + "\" width=\"100%\" height=\"160px\" frameborder=\"0\" allowtransparency=\"true\" allow=\"encrypted-media\"></iframe>"            
                 ;
            $(episode).appendTo("#episodeDetails"); 
+        }
+        }
     }
 
 </script>
