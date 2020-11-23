@@ -116,7 +116,8 @@ Extend recent episodes to span both columns. Create two columns within that box 
         const episodeNumber = urlParams.get('episodeNum') ;
 
         for (var i = 0; i < episodes.length; i++) {
-        if (episodes[i].episodeNumber == episodeNumber) {
+            alert(episodes[i].episodeNumber);
+        if (parseInt(episodes[i].episodeNumber) == episodeNumber) {
             var episode = "<h1>" + episodes[i].title + "</h1> " +
                 "<hr> <section class=\"DescSection\">" +
                 "<img class=\"img\" src=\"" + episodes[i].image + "\" alt=\"Episode " + parseInt(episodeNumber)  + "\" width=\"150\" height=\"150\"> " +
