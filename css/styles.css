@@ -5,6 +5,7 @@ url('https://fonts.googleapis.com/css?family=Raleway:300,400,700,900');
     font-family: 'starWarsFont';
     src: url('../fonts/star_jedi/starjedi/Starjhol.ttf'); /* IE6-IE8 */
   }
+  
 
 /* Applies to all elements */
 *{
@@ -115,7 +116,7 @@ url('https://fonts.googleapis.com/css?family=Raleway:300,400,700,900');
     flex-wrap: wrap;
     align-content: flex-start;
     grid-row-start: 1;
-    grid-row-end: 3;
+    grid-row-end: 4;
     grid-column-start: 2;
     grid-column-end: 2;
     max-height: 1400px;
@@ -149,7 +150,7 @@ url('https://fonts.googleapis.com/css?family=Raleway:300,400,700,900');
   border-spacing: 10px;
   border-spacing: 10px 5px;
   grid-template-columns: 1fr 2.5fr;
-  grid-template-rows: auto auto;
+  grid-template-rows: auto auto auto;
   overflow: hidden;
 }
 .span1{
@@ -160,9 +161,18 @@ url('https://fonts.googleapis.com/css?family=Raleway:300,400,700,900');
     height: auto;
 
 }
-.span2{
+.span3{
     grid-row-start: 2;
     grid-row-end: 2;
+    grid-column-start: 1;
+    grid-column-end: 1;
+}
+.span3 a:hover{
+    opacity: 40%;
+}
+.span2{
+    grid-row-start: 3;
+    grid-row-end: 3;
     grid-column-start: 1;
     grid-column-end: 1;
 }
@@ -194,6 +204,9 @@ url('https://fonts.googleapis.com/css?family=Raleway:300,400,700,900');
     background-size: cover;
     height: 45px;
     width: 45px;
+}
+.socialMedia_link:hover{
+    opacity: .6;
 }
 
 
@@ -386,8 +399,8 @@ p:last-of-type{
         display: none;
         grid-row-start: 2;
         grid-row-end: 2;
-
     }
+    
     .floatingBubble{
         width: 95vw;
     }
@@ -454,8 +467,11 @@ nav a {
     font-size: 1.3em;
     padding: .5em;
     color: #FFF
+    
 }
-nav a:hover
+nav a:hover{
+    opacity: .5;
+}
 nav a:focus{
     color: #DDD;
 }
