@@ -307,6 +307,7 @@ $(document).ready(function() {
     
    $.getJSON('episodes.json', function(data) {
        var latestJsonNumber = data.episodes.length - 1;
+       data.episodes.reverse();
        $.each(data.episodes, function(i, f) {
           if(parseInt((f.number)) == latestJsonNumber){
             var latestEpisode = "<div class=\"episode_Widget centered\">" + "<h2><a href=\"episode.html?episodeNum=" + f.number + "\"> <img class=\"img\" src=\"" + f.image + "\" width=\"150\" height=\"150\"></a> " 
