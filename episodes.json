@@ -1,39 +1,47 @@
 {
     "episodes": [
         {
-            "number": "5",
-            "title": "Podcast Interview: Marvel's Netflix Makeup Artist Sarit Klein",
-            "description": "This week Gary and Justus interview lead makeup artist Sarit Klein. We talk makeup, blood, scars, bruises, tattoos, facial hair, glitz and glam. This is a perfect podcast to learn more about the collaboration process when making a show. We dive deep into the development of different characters and visual aesthetics for the Marvel Netflix shows like Daredevil, Jessica Jones, Luke Cage, and The Defenders.  We chat about the give and take of using practical effects vs cgi and how makeup tells a story. We also talk about zombies and vampires",
-            "dateAndTime": "10/29/20 1hr 04min",
-            "image": "img/Episode_Thumbnails/MarvelPodcastInterview.jpg",
-            "spotifyLink": "https://open.spotify.com/embed-podcast/episode/7eqmB8VXfLz4r95ompiEsA"
+            "number": "110",
+            "title": "Naughty Toddlers and Possible Cults",
+            "description": "This week Gary and Justus dive back into the amazing series of the Mandalorian. We have a ton of fun breaking down and discussing episodes two and three. We talk controversies and speculate what is to come in the next episode. We round out the show with our famous comic of the week where Justus breaks down the recently released Darth Vader #7.",
+            "dateAndTime": "11/17/20 52min",
+            "image": "img/Episode_Thumbnails/defaultEpisode_image.jpg",
+            "spotifyLink": "https://open.spotify.com/embed-podcast/episode/73DXSfIRm5uolYuzgo0eSc"
         },
         {
-            "number": "4",
+            "number": "109",
+            "title": "Palpatine is the good guy? feat. Philosophy professor Dr. David Kyle Johnson",
+            "description": "Are the Jedi Evil? Is Palpatine morally right? Is a quote from Rose the most important moment from Star Wars??? The boys have their minds blown as they discuss the moral questions behind Star Wars with King's College Philosophy professor Dr. David Kyle Johnson.",
+            "dateAndTime": "11/10/20 1hr 12min",
+            "image": "img/Episode_Thumbnails/SoPadme_ep.jpg",
+            "spotifyLink": "https://open.spotify.com/embed-podcast/episode/1lRC3JNBev33q1PMTfUkDM"
+        },
+        {
+            "number": "108",
+            "title": "Krayt Dragons and Force Lightning",
+            "description": "This week Gary and Justus return to a more casual format. We start off with a hilarious Twitter tidbits and talk some nerdy nuggets. The main portion of the episode is us having a great time breaking down the most recent episode of The Mandalorian! We round out the episode with a comic of the week where we discuss Darth Vader's most recent conundrum and the introduction of a new assassin in Star Wars: Darth Vader #6 written by Greg Pak and drawn by Raffaele Ienco .",
+            "dateAndTime": "11/03/20 53min",
+            "image": "img/Episode_Thumbnails/defaultEpisode_image.jpg",
+            "spotifyLink": "https://open.spotify.com/embed-podcast/episode/0ymAgOF05CsWT8sQ3Qv7X6"
+        },
+        {
+            "number": "107",
+            "title": "Podcast Interview: Writer and former Imagineer Jason Surrell",
+            "description": "Have you ever wondered how Disney or Universal rides and attractions are made? Listen as Gary and Justus interview Jason Surrell! Jason has created rides for both Disney and Universal. He has pitched and created content to both George Lucas and Kevin Feige. He has also written many book on the creation of the rides to the films. Some of the rides/attractions he has helped create include Star Tours, Star Wars weekends, The Legend of Captain Jack Sparrow starring Johnny Depp, Race Through New York Starring Jimmy Fallon, and enhancements to Pirates of the Caribbean and The Haunted Mansion. His written works include The Haunted Mansion: From the Magic Kingdom to the Movies, Screenplay by Disney: Tips and Techniques to Bring Magic to Your Moviemaking, Pirates of the Caribbean: From the Magic Kingdom to the Movies, Disney Mountains: Imagineering at Its Peak and The Art of Marvel’s The Avengers.",
+            "dateAndTime": "10/27/20 56min",
+            "image": "img/Episode_Thumbnails/SoPadme_ep.jpg",
+            "spotifyLink": "https://open.spotify.com/embed-podcast/episode/0zRmCeUK4UXeXUXcJvZdRH"
+        },
+        {
+            "number": "106",
             "title": "So Padme, why did you choose Anakin? Feat. Comic Books Couples Counseling",
             "description": "The \"Comic Books Couples Counseling\" podcast joins Pod Wars to help perform a counseling session for Anakin and Padme! We use the enneagram to dissect the personality traits of these characters, allowing us to look at everything course, rough, and irritating with their relationship. Expect plenty of sand, dead younglings, and aggressive negotiations",
-            "dateAndTime": "10/27/20 1hr 42min",
+            "dateAndTime": "10/20/20 1hr 24min",
             "image": "img/Episode_Thumbnails/SoPadme_ep.jpg",
             "spotifyLink": "https://open.spotify.com/embed-podcast/episode/7eqmB8VXfLz4r95ompiEsA"
         },
         {
-            "number": "3",
-            "title": "3Podcast Interview: Marvel's Netflix Makeup Artist Sarit Klein",
-            "description": "This week Gary and Justus interview lead makeup artist Sarit Klein. We talk makeup, blood, scars, bruises, tattoos, facial hair, glitz and glam. This is a perfect podcast to learn more about the collaboration process when making a show. We dive deep into the development of different characters and visual aesthetics for the Marvel Netflix shows like Daredevil, Jessica Jones, Luke Cage, and The Defenders.  We chat about the give and take of using practical effects vs cgi and how makeup tells a story. We also talk about zombies and vampires",
-            "dateAndTime": "10/29/20 1hr 04min",
-            "image": "img/Episode_Thumbnails/MarvelPodcastInterview.jpg",
-            "spotifyLink": "https://open.spotify.com/embed-podcast/episode/7eqmB8VXfLz4r95ompiEsA"
-        },
-        {
-            "number": "2",
-            "title": "2So Padme, why did you choose Anakin? Feat. Comic Books Couples Counseling",
-            "description": "The \"Comic Books Couples Counseling\" podcast joins Pod Wars to help perform a counseling session for Anakin and Padme! We use the enneagram to dissect the personality traits of these characters, allowing us to look at everything course, rough, and irritating with their relationship. Expect plenty of sand, dead younglings, and aggressive negotiations",
-            "dateAndTime": "10/27/20 1hr 42min",
-            "image": "img/Episode_Thumbnails/SoPadme_ep.jpg",
-            "spotifyLink": "https://open.spotify.com/embed-podcast/episode/7eqmB8VXfLz4r95ompiEsA"
-        },
-        {
-            "number": "1",
+            "number": "105",
             "title": "1Podcast Interview: Marvel's Netflix Makeup Artist Sarit Klein",
             "description": "This week Gary and Justus interview lead makeup artist Sarit Klein. We talk makeup, blood, scars, bruises, tattoos, facial hair, glitz and glam. This is a perfect podcast to learn more about the collaboration process when making a show. We dive deep into the development of different characters and visual aesthetics for the Marvel Netflix shows like Daredevil, Jessica Jones, Luke Cage, and The Defenders.  We chat about the give and take of using practical effects vs cgi and how makeup tells a story. We also talk about zombies and vampires",
             "dateAndTime": "10/29/20 1hr 04min",
@@ -41,12 +49,12 @@
             "spotifyLink": "https://open.spotify.com/embed-podcast/episode/7eqmB8VXfLz4r95ompiEsA"
         },
         {
-            "number": "0",
-            "title": "Naughty Toddlers and Possible Cults",
-            "description": "This week Gary and Justus dive back into the amazing series of the Mandalorian. We have a ton of fun breaking down and discussing episodes two and three. We talk controversies and speculate what is to come in the next episode. We round out the show with our famous comic of the week where Justus breaks down the recently released Darth Vader #7.",
-            "dateAndTime": "11/17/20 52min",
-            "image": "img/Episode_Thumbnails/defaultEpisode_image.jpg",
-            "spotifyLink": "https://open.spotify.com/embed-podcast/episode/73DXSfIRm5uolYuzgo0eSc"
+            "number": "104",
+            "title": "Boba Fett Actor and Avengers Animator Mark Austin",
+            "description": "The man behind the mask of BOBA FETT in Star Wars Episode IV: A New Hope Special Edition, Mark Austin, chats with the guys about mask acting, the iconic armor, and his illustrious career (oh yeah he has also animated a little known film..... THE AVENGERS!!!).",
+            "dateAndTime": "10/06/20 1hr 10min",
+            "image": "img/Episode_Thumbnails/LowQuality_BobaFett.jpg",
+            "spotifyLink": "https://open.spotify.com/embed-podcast/episode/1odvQ5IcqrmrqU7tlSKmt7"
         }
     ]
 } 
