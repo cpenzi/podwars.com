@@ -381,6 +381,9 @@ p:last-of-type{
         max-height: fit-content;
 
     }
+    .latestEpisodes{
+        width: 60vw;
+    }
     .grd_3point{
         grid-template-columns: 1fr;
         grid-template-rows: auto, auto, auto;
