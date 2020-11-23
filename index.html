@@ -33,19 +33,9 @@
 Extend recent episodes to span both columns. Create two columns within that box that is scrollable.-->
     <div class="floatingBubble">
         <h1 style="color: white;"><u>Latest Episode</u></h1>
-    <div class="episode_Widget centered">
-        <h2><img class="img" src="img/Episode_Thumbnails/MarvelPodcastInterview.jpg" alt="Episode 39" width="150" height="150">
-            Podcast Interview: Marvel's Netflix Makeup Artist Sarit Klein
-            <hr style=" margin: 2px;" color="black">
-            <p>This week Gary and Justus interview lead makeup artist Sarit Klein. We talk makeup, blood, scars,
-                bruises, tattoos, facial hair, glitz and glam. We dive deep into the development of different
-                characters and visual aesthetics for the Marvel Netflix shows like Daredevil, Jessica Jones,
-                Luke Cage, and The Defenders.
-                We also talk about zombies and vampires.
-            </p>
-        </h2>
-        <div class="episode_DateTime">10/23/20 | 1hr 35min</div>
-    </div>
+    <section class="latestEpisode" id ="latestEpisode">
+
+    </section>
     </div>
      
 
@@ -310,6 +300,20 @@ $(document).ready(function() {
     
    $.getJSON('episodes.json', function(data) {
        $.each(data.episodes, function(i, f) {
+          if(parseInt((f.number)) == 0){
+            var latestEpisode = "<div class=\"episode_Widget centered\">" + "<h2><a href=\"episode.html?episodeNum=" + f.number + "\"> <img class=\"img\" src=\"" + f.image + "\" width=\"150\" height=\"150\"></a> " 
+          + "<a href=\"episode.html?episodeNum=" + f.number + " style=\"text-decoration: none\">"
+          + f.title
+          + "</a> "
+          + "<hr style=\" margin: 2px;\" color=\"black\">"
+          + "<p> "
+          + f.description
+          + "</p> </h2>"
+          + "<div class =\"episode_DateTime\">" + f.dateAndTime + "<div>"
+           $(latestEpisode).appendTo("#latestEpisode"); 
+          }
+          else{
+
           var episode = "<div class=\"episode_Widget\">" + "<h2><a href=\"episode.html?episodeNum=" + f.number + "\"> <img class=\"img\" src=\"" + f.image + "\" width=\"150\" height=\"150\"></a> " 
           + "<a href=\"episode.html?episodeNum=" + f.number + " style=\"text-decoration: none\">"
           + f.title
@@ -320,6 +324,7 @@ $(document).ready(function() {
           + "</p> </h2>"
           + "<div class =\"episode_DateTime\">" + f.dateAndTime + "<div>"
            $(episode).appendTo("#gridWidgets"); 
+        }
      });
 
    });
