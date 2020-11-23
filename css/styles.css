@@ -376,6 +376,7 @@ p:last-of-type{
         grid-template-columns: 1fr;
         grid-template-rows: auto, auto, auto;
         width: 95vw;
+        display: list-item;
 
     }
     .span1{
