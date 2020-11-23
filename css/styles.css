@@ -368,7 +368,9 @@ p:last-of-type{
 	width: 33.333334%;
 	float: left;
 }
-
+.latestEpisodes{
+    width: 60vw;
+}
 @media  screen and (max-width: 800px) {
     .flex-container{
         grid-row-start: 3;
