@@ -306,10 +306,9 @@ $(document).ready(function() {
    var people = [];
     
    $.getJSON('episodes.json', function(data) {
-       var len = data.episodes.length;
-       alert(len);
+       var latestJsonNumber = data.episodes.length - 1;
        $.each(data.episodes, function(i, f) {
-          if(parseInt((f.number)) == 0){
+          if(parseInt((f.number)) == latestJsonNumber){
             var latestEpisode = "<div class=\"episode_Widget centered\">" + "<h2><a href=\"episode.html?episodeNum=" + f.number + "\"> <img class=\"img\" src=\"" + f.image + "\" width=\"150\" height=\"150\"></a> " 
           + "<a href=\"episode.html?episodeNum=" + f.number + " style=\"text-decoration: none\">"
           + f.title
