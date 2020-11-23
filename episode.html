@@ -116,12 +116,12 @@ Extend recent episodes to span both columns. Create two columns within that box 
         const episodeNumber = urlParams.get('episodeNum') ;
 
         for (var i = 0; i < episodes.length; i++) {
-            alert(episodes[i].episodeNumber);
-        if (parseInt(episodes[i].episodeNumber) == episodeNumber) {
+            alert(episodes[i].number);
+        if (parseInt(episodes[i].number) == episodeNumber) {
             var episode = "<h1>" + episodes[i].title + "</h1> " +
                 "<hr> <section class=\"DescSection\">" +
-                "<img class=\"img\" src=\"" + episodes[i].image + "\" alt=\"Episode " + parseInt(episodeNumber)  + "\" width=\"150\" height=\"150\"> " +
-                "<p>" + episodes[parseInt(episodeNumber)].description  + "</p>" +
+                "<img class=\"img\" src=\"" + episodes[i].image + "\" alt=\"Episode " + episodes[i].number  + "\" width=\"150\" height=\"150\"> " +
+                "<p>" + episodes[i].description  + "</p>" +
                 " </section> <hr> <iframe class=\"latestEpisode details\" src=\"" + episodes[i].spotifyLink + "\" width=\"100%\" height=\"160px\" frameborder=\"0\" allowtransparency=\"true\" allow=\"encrypted-media\"></iframe>"            
                 ;
            $(episode).appendTo("#episodeDetails"); 
