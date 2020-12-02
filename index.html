@@ -69,8 +69,6 @@ Extend recent episodes to span both columns. Create two columns within that box 
                 data-size="large" data-show-screen-name="false" data-show-count="true">Follow @PodWarsPodcast</a>
             <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
         </div>
-
-
         <section class="grd_col flex-container" id="gridWidgets" style="background:#5e5e5e">
             <!--
             <div class="episode_Widget">
@@ -302,6 +300,52 @@ Extend recent episodes to span both columns. Create two columns within that box 
 
 $(document).ready(function() {
 
+    const RSS_URL = `https://anchor.fm/s/12e8ac1c/podcast/rss`;
+    var i = 0;
+    fetch(RSS_URL)
+    .then(response => response.text())
+    .then(str => new window.DOMParser().parseFromString(str, "text/xml"))
+    .then(data => {
+        
+        const items = data.querySelectorAll("item");
+        let html = ``;
+        items.forEach(el => {
+        var date = new Date(null);
+        var sec = el.querySelector("duration").innerHTML.replace( /(<([^>]+)>)/ig, '').replace("<![CDATA[", "").replace("]]>", ""); // specify value for SECONDS here
+        var duration_hour = Math.floor(sec / 3600);
+        var duration_minute = Math.floor(sec % 3600 / 60);
+        var formattedTime = duration_hour + " hr " + duration_minute + "min ";
+        i++;
+        if(i== 1){
+            var latestEpisode = "<div class=\"episode_Widget centered\">" + "<h2><a href=\"episode.html?episodeNum=" + i + "\"> <img class=\"img\" src=\"" + "img/Episode_Thumbnails/defaultEpisode_image.jpg" + "\" width=\"150\" height=\"150\"></a> " 
+                + "<a href=\"episode.html?episodeNum=" + i + "\" style=\"text-decoration: none\">"
+          + el.querySelector("title").innerHTML.replace("<![CDATA[", "").replace("]]>", "")
+          + "</a> "
+          + "<hr style=\" margin: 2px;\" color=\"black\">"
+          + "<p> "
+          + el.querySelector("description").innerHTML.replace("<![CDATA[", "").replace("]]>", "").replace( /(<([^>]+)>)/ig, '').replace(/Twitter: @PodWarsPodcast/gi, "").replace(/Email: askpodwarspodcast@gmail.com/gi, "").replace(/gmail: askpodwarspodcast@gmail.com/gi, "").split('---')[0]
+          + "</p> </h2>"
+          + "<div class =\"episode_DateTime\">" + formattedTime + "<div>"
+           $(latestEpisode).appendTo("#latestEpisode"); 
+        }
+        else{
+            var episode = "<div class=\"episode_Widget\">" + "<h2><a href=\"episode.html?episodeNum=" + i + "\"> <img class=\"img\" src=\"" + "img/Episode_Thumbnails/defaultEpisode_image.jpg" + "\" width=\"150\" height=\"150\"></a> " 
+            + "<a href=\"episode.html?episodeNum=" + i + "\" style=\"text-decoration: none\">"
+            + el.querySelector("title").innerHTML.replace("<![CDATA[", "").replace("]]>", "")
+            + "</a> "
+            + "<hr style=\" margin: 2px;\" color=\"black\">"
+            + "<p> "
+            + el.querySelector("description").innerHTML.replace("<![CDATA[", "").replace("]]>", "").replace( /(<([^>]+)>)/ig, '').replace(/Twitter: @PodWarsPodcast/gi, "").replace(/Email: askpodwarspodcast@gmail.com/gi, "").replace(/gmail: askpodwarspodcast@gmail.com/gi, "").split('---')[0]
+            + "</p> </h2>"
+            + "<div class =\"episode_DateTime\">" + formattedTime + "<div>"
+            $(episode).appendTo("#gridWidgets");            
+        }
+
+        });
+    });
+    
+
+/*
    var people = [];
     
    $.getJSON('episodes.json', function(data) {
@@ -336,7 +380,7 @@ $(document).ready(function() {
      });
 
    });
-
+*/
 });
 </script>
 
