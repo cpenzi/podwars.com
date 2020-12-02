@@ -78,6 +78,7 @@ url('https://fonts.googleapis.com/css?family=Raleway:300,400,700,900');
     width: 100%;
     text-align: center;
     margin-bottom: 20px;
+    
   }
 
 .episodeDetails img{
@@ -99,6 +100,41 @@ url('https://fonts.googleapis.com/css?family=Raleway:300,400,700,900');
     padding: 10px;
 }
 .aboutUsDesc img{
+    float: top;
+    padding-right: 7px;
+    padding-left: 7px;
+    height: 175px;
+    width: 175px;
+    border-radius: 50px;
+    padding: 7px;
+}
+.epMainTitle{
+        font-family: 'starWarsFont', Fallback, sans-serif;
+    color: yellow
+}
+.epTitle{
+    font-size: 20px;
+}
+.nextEpisodeWidget{
+    width: 32.5%;
+    text-align: center;
+    margin-bottom: 20px;
+    margin-right: 10px;
+    align-items: center;
+    overflow: hidden;
+    max-height: 750px;
+}
+.nextEpisodeWidget:last-child{
+    margin-right: 0px;
+}
+.nextEpisodeWidget p{
+    padding: 10px;
+    
+    max-height: 750px;
+    overflow: scroll;
+
+}
+.nextEpisodeWidget img{
     float: top;
     padding-right: 7px;
     padding-left: 7px;
@@ -181,6 +217,9 @@ url('https://fonts.googleapis.com/css?family=Raleway:300,400,700,900');
   margin:  10px;
   
 }
+.epTitle{
+
+}
 
 .floatingBubble{
     padding: 14px;
@@ -249,7 +288,12 @@ url('https://fonts.googleapis.com/css?family=Raleway:300,400,700,900');
 }
 
 
-
+.audioControls{
+    width: 75%;
+    padding: 10px;
+    display: block;
+    margin: 0 auto;
+}
 .clearfix::after,
 section::after,
 footer::after{
@@ -427,6 +471,9 @@ p:last-of-type{
         width: 100%;
 
         
+    }
+    .nextEpisodeWidget{
+        width: 100%;
     }
     .centered{
         margin: auto;

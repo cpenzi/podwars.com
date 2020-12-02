@@ -60,26 +60,19 @@ Extend recent episodes to span both columns. Create two columns within that box 
         </div>
         <section class="grd_col flex-container" id="gridWidgets" style="background:#171717; height: auto;">
             
-            <div class="episodeDetails" id="episodeDetails" style="background-color: grey; border-radius: 20px;">
-                <!-- 
-                <h1> This is a title of one of the podcast. It goes here  </h1>  
-                <hr>
-                <section class="DescSection">
-                <img class="img" src="img/MarvelPodcastInterview.jpg" alt="Episode 39" width="150" height="150">
-                    <p>This week Gary and Justus interview lead makeup artist Sarit Klein. We talk makeup, blood, scars,
-                        bruises, tattoos, facial hair, glitz and glam. We dive deep into the development of different
-                        characters and visual aesthetics for the Marvel Netflix shows like Daredevil, Jessica Jones,
-                        Luke Cage, and The Defenders.
-                        We also talk about zombies and vampires.
-                    </p>
-                </section>
-                <hr>
-                <iframe class="latestEpisode details" src="https://open.spotify.com/embed-podcast/episode/3vvMim3nkBZDJYf7BNjbWi" width="100%" height="160px" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
-            -->
+            <div class="episodeDetails" id="episodeDetails" style="background-color: #b03a3a; border-radius: 20px;">
+
             </div>
-        
+            <section class="grd_col flex-container" id="episodeNext" style="background:#171717; height: auto;">
+         
+            </section>
+
+            
         </section>
+        
+        
     </div>
+
 
     <div class="col-3">
         <p>Powered by Penzi. <br><p style="font-size: 10px;"> Site created by Christopher Penzi.</p></p>
@@ -119,16 +112,58 @@ Extend recent episodes to span both columns. Create two columns within that box 
         var formattedTime = duration_hour + " hr " + duration_minute + "min ";
         var title = episode.querySelector("title").innerHTML.replace("<![CDATA[", "").replace("]]>", "");
         var description = episode.querySelector("description").innerHTML.replace("<![CDATA[", "").replace("]]>", "").replace( /(<([^>]+)>)/ig, '').replace(/Twitter: @PodWarsPodcast/gi, "").replace(/Email: askpodwarspodcast@gmail.com/gi, "").replace(/gmail: askpodwarspodcast@gmail.com/gi, "").split('---')[0];
+        var audioLink = episode.querySelector("enclosure").getAttribute("url");
         i++;
         
-        var episode = "<h1>" + title + "</h1> " +
+        var episode = "<h1 class=\"epTitle\">" + title + "</h1> " +
             "<hr> <section class=\"DescSection\">" +
             "<img class=\"img\" src=\"" + image_Url + "\" alt=\"Episode " + episodeNumber + "\" width=\"150\" height=\"150\"> " +
             "<p>" + description  + "</p>" +
-            " </section> <hr> <iframe class=\"latestEpisodes details\" src=\""  + "\" width=\"100%\" height=\"160px\" frameborder=\"0\" allowtransparency=\"true\" allow=\"encrypted-media\"></iframe>"            
+            " </section> <hr>"  +
+            "<audio controls class=\"audioControls\">" +
+                "<source src=\"" + audioLink + "\" type=\"audio/ogg\">" +
+                  "Your browser does not support the audio element."
+                  "</audio>  "       
             ;
-        $(episode).appendTo("#episodeDetails");   
+       
+        $(episode).appendTo("#episodeDetails");
+
+        var latestEpisode = items[0]; 
+        var previousEpisode = items[eval(episodeNumber)];
+        var hi = eval(episodeNumber) - 1
+        alert(hi)
+        var nextEpisode = items[episodeNumber - 2];
+
+
+       var previous = "<div class=\"nextEpisodeWidget\" style=\"background-color: grey; border-radius: 40px;\">" +
+                    "<h1 class=\"epMainTitle\">Previous Episode</h1>"+
+                    "<img class=\"img\" src=\"" + previousEpisode.querySelector("image").getAttribute("href") + "\" alt=\"Episode 39\" width=\"150\" height=\"150\"/>" +
+                    "<h1 class=\"epTitle\">" + previousEpisode.querySelector("title").innerHTML.replace("<![CDATA[", "").replace("]]>", "") + "</h1>" +
+                    "<hr style=\"border-color: black;\">" +
+                        "<p>" + previousEpisode.querySelector("description").innerHTML.replace("<![CDATA[", "").replace("]]>", "").replace( /(<([^>]+)>)/ig, '').replace(/Twitter: @PodWarsPodcast/gi, "").replace(/Email: askpodwarspodcast@gmail.com/gi, "").replace(/gmail: askpodwarspodcast@gmail.com/gi, "").split('---')[0]
+                       + "</p>" +
+               "</div>"
+        $(previous).appendTo("#episodeNext");  
+        var latest = "<div class=\"nextEpisodeWidget\" style=\"background-color: grey; border-radius: 40px;\">" +
+                    "<h1 class=\"epMainTitle\">Latest Episode</h1>"+
+                    "<img class=\"img\" src=\"" + latestEpisode.querySelector("image").getAttribute("href") + "\" alt=\"Episode 39\" width=\"150\" height=\"150\"/>" +
+                    "<h1 class=\"epTitle\">" + latestEpisode.querySelector("title").innerHTML.replace("<![CDATA[", "").replace("]]>", "") + "</h1>" +
+                    "<hr style=\"border-color: black;\">" +
+                        "<p>" + latestEpisode.querySelector("description").innerHTML.replace("<![CDATA[", "").replace("]]>", "").replace( /(<([^>]+)>)/ig, '').replace(/Twitter: @PodWarsPodcast/gi, "").replace(/Email: askpodwarspodcast@gmail.com/gi, "").replace(/gmail: askpodwarspodcast@gmail.com/gi, "").split('---')[0]
+                       + "</p>" +
+               "</div>"
+        $(latest).appendTo("#episodeNext");  
+        var next = "<div class=\"nextEpisodeWidget\" style=\"background-color: grey; border-radius: 40px;\">" +
+                    "<h1 class=\"epMainTitle\">Next Episode</h1>"+
+                    "<img class=\"img\" src=\"" + nextEpisode.querySelector("image").getAttribute("href") + "\" alt=\"Episode 39\" width=\"150\" height=\"150\"/>" +
+                    "<h1 class=\"epTitle\">" + nextEpisode.querySelector("title").innerHTML.replace("<![CDATA[", "").replace("]]>", "") + "</h1>" +
+                    "<hr style=\"border-color: black;\">" +
+                        "<p>" + nextEpisode.querySelector("description").innerHTML.replace("<![CDATA[", "").replace("]]>", "").replace( /(<([^>]+)>)/ig, '').replace(/Twitter: @PodWarsPodcast/gi, "").replace(/Email: askpodwarspodcast@gmail.com/gi, "").replace(/gmail: askpodwarspodcast@gmail.com/gi, "").split('---')[0]
+                       + "</p>" +
+               "</div>"
+        $(next).appendTo("#episodeNext");  
         
     });  
 
 </script>
+

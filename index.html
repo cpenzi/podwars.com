@@ -320,7 +320,14 @@ $(document).ready(function() {
         var image_Url = el.querySelector("image").getAttribute("href");
         var description = el.querySelector("description").innerHTML.replace("<![CDATA[", "").replace("]]>", "").replace( /(<([^>]+)>)/ig, '').replace(/Twitter: @PodWarsPodcast/gi, "").replace(/Email: askpodwarspodcast@gmail.com/gi, "").replace(/gmail: askpodwarspodcast@gmail.com/gi, "").split('---')[0];
         var title = el.querySelector("title").innerHTML.replace("<![CDATA[", "").replace("]]>", "");
-        
+        var publishDate = el.querySelector("pubDate").innerHTML
+        var date = new Date(publishDate);
+        let year = date.getFullYear();
+        let month = (1 + date.getMonth()).toString().padStart(2, '0');
+        let day = date.getDate().toString().padStart(2, '0');
+  
+        var formattedPubDate =  month + '/' + day + '/' + year;
+        formattedPubDate +=  " " + formattedTime;
         i++;
         if(i== 1){
             var latestEpisode = "<div class=\"episode_Widget centered\">" + "<h2><a href=\"episode.html?episodeNum=" + i + "\"> <img class=\"img\" src=\"" + image_Url + "\" width=\"150\" height=\"150\"></a> " 
@@ -331,7 +338,7 @@ $(document).ready(function() {
           + "<p> "
           + description
           + "</p> </h2>"
-          + "<div class =\"episode_DateTime\">" + formattedTime + "<div>"
+          + "<div class =\"episode_DateTime\">" + formattedPubDate + "<div>"
            $(latestEpisode).appendTo("#latestEpisode"); 
         }
         else{
@@ -343,9 +350,11 @@ $(document).ready(function() {
             + "<p> "
             + description
             + "</p> </h2>"
-            + "<div class =\"episode_DateTime\">" + formattedTime + "<div>"
+            + "<div class =\"episode_DateTime\">" + formattedPubDate + "<div>"
             $(episode).appendTo("#gridWidgets");            
         }
+
+        
 
         });
     });
