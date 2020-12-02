@@ -99,63 +99,36 @@ Extend recent episodes to span both columns. Create two columns within that box 
 
 
 <script>
-    
-    var episodes = [];
-    $.getJSON('episodes.json', function(data) {
-       $.each(data.episodes, function(i, f) {
-           episodes.push(f);
-     });
-    });
-    
-    window.onload = function(){
-        const RSS_URL = `https://anchor.fm/s/12e8ac1c/podcast/rss`;
-
-        fetch(RSS_URL)
-        .then(response => response.text())
-        .then(str => new window.DOMParser().parseFromString(str, "text/xml"))
-        .then(data => {
-            console.log(data);
-            const items = data.querySelectorAll("item");
-            let html = ``;
-            items.forEach(el => {
-
-            //alert(el.getAttributeNS("itunes", "image"))
-            //var xmlText = new XMLSerializer().serializeToString(el);
-            //alert(xmlText)
-            });
-        });
+    const queryString = window.location.search;
+    const urlParams = new URLSearchParams(queryString);  
+    const episodeNumber = urlParams.get('episodeNum') ;
+    const RSS_URL = `https://anchor.fm/s/12e8ac1c/podcast/rss`;
+    var i = 0;
+    fetch(RSS_URL)
+    .then(response => response.text())
+    .then(str => new window.DOMParser().parseFromString(str, "text/xml"))
+    .then(data => {
+        const items = data.querySelectorAll("item");
+        var episode = items[episodeNumber-1];
         
-        //const queryString = window.location.search;
-        //const urlParams = new URLSearchParams(queryString);  
-        //const episodeNumber = urlParams.get('episodeNum') ;
-
-        //for (var i = 0; i < episodes.length; i++) {
-        //if (parseInt(episodes[i].number) == episodeNumber) {
-          //  var episode = "<h1>" + episodes[i].title + "</h1> " +
-           //     "<hr> <section class=\"DescSection\">" +
-           //     "<img class=\"img\" src=\"" + episodes[i].image + "\" alt=\"Episode " + episodes[i].number  + "\" width=\"150\" height=\"150\"> " +
-            //    "<p>" + episodes[i].description  + "</p>" +
-            //    " </section> <hr> <iframe class=\"latestEpisodes details\" src=\"" + episodes[i].spotifyLink + "\" width=\"100%\" height=\"160px\" frameborder=\"0\" allowtransparency=\"true\" allow=\"encrypted-media\"></iframe>"            
-            //    ;
-           //$(episode).appendTo("#episodeDetails"); 
-        //}
-        //}
-    }
+        var image_Url = episode.querySelector("image").getAttribute("href");
+        var date = new Date(null);
+        var sec = episode.querySelector("duration").innerHTML.replace( /(<([^>]+)>)/ig, '').replace("<![CDATA[", "").replace("]]>", ""); // specify value for SECONDS here
+        var duration_hour = Math.floor(sec / 3600);
+        var duration_minute = Math.floor(sec % 3600 / 60);
+        var formattedTime = duration_hour + " hr " + duration_minute + "min ";
+        var title = episode.querySelector("title").innerHTML.replace("<![CDATA[", "").replace("]]>", "");
+        var description = episode.querySelector("description").innerHTML.replace("<![CDATA[", "").replace("]]>", "").replace( /(<([^>]+)>)/ig, '').replace(/Twitter: @PodWarsPodcast/gi, "").replace(/Email: askpodwarspodcast@gmail.com/gi, "").replace(/gmail: askpodwarspodcast@gmail.com/gi, "").split('---')[0];
+        i++;
+        
+        var episode = "<h1>" + title + "</h1> " +
+            "<hr> <section class=\"DescSection\">" +
+            "<img class=\"img\" src=\"" + image_Url + "\" alt=\"Episode " + episodeNumber + "\" width=\"150\" height=\"150\"> " +
+            "<p>" + description  + "</p>" +
+            " </section> <hr> <iframe class=\"latestEpisodes details\" src=\""  + "\" width=\"100%\" height=\"160px\" frameborder=\"0\" allowtransparency=\"true\" allow=\"encrypted-media\"></iframe>"            
+            ;
+        $(episode).appendTo("#episodeDetails");   
+        
+    });  
 
 </script>
-
-<!--
-<h1> This is a title of one of the podcast. It goes here  </h1>  
-                <hr>
-                <section class="DescSection">
-                <img class="img" src="img/MarvelPodcastInterview.jpg" alt="Episode 39" width="150" height="150">
-                    <p>This week Gary and Justus interview lead makeup artist Sarit Klein. We talk makeup, blood, scars,
-                        bruises, tattoos, facial hair, glitz and glam. We dive deep into the development of different
-                        characters and visual aesthetics for the Marvel Netflix shows like Daredevil, Jessica Jones,
-                        Luke Cage, and The Defenders.
-                        We also talk about zombies and vampires.
-                    </p>
-                </section>
-                <hr>
-                <iframe class="latestEpisode details" src="https://open.spotify.com/embed-podcast/episode/3vvMim3nkBZDJYf7BNjbWi" width="100%" height="160px" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
--->
