@@ -90,7 +90,7 @@ url('https://fonts.googleapis.com/css?family=Raleway:300,400,700,900');
     width: 100%;
     text-align: center;
     margin-bottom: 20px;
-    
+    margin:10px;
   }
 
 .episodeDetails img{
@@ -497,15 +497,13 @@ p:last-of-type{
         display: none;
     }
     .aboutUsDesc{
-        width: 100%;
-
-        
+        width: 100%;  
     }
     .nextEpisodeWidget{
         width: 100%;
     }
-    episodedetail{
-        width: 100%;
+    .episodeDetails{
+        width: 92%;
     }
     .centered{
         margin: auto;
