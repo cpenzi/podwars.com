@@ -43,7 +43,19 @@ url('https://fonts.googleapis.com/css?family=Raleway:300,400,700,900');
     font-size: 12px;
     text-align: left;
     max-height: 122px;
+    pointer-events: none;
+
 }
+.episode_Widget p:before {
+    content:'';
+    width:100%;
+    height:100%;    
+    position:absolute;
+    left:0;
+    top:0;
+    background:linear-gradient(transparent 150px, #b03a3a);
+    
+  }
 
 .episode_Widget h2{
     font-size: 20px;
@@ -109,11 +121,22 @@ url('https://fonts.googleapis.com/css?family=Raleway:300,400,700,900');
     padding: 7px;
 }
 .epMainTitle{
-        font-family: 'starWarsFont', Fallback, sans-serif;
-    color: yellow
+    font-family: 'starWarsFont', Fallback, sans-serif;
+    color: yellow;
+    font-size: 25px;
+    margin: 0px;
+    margin-top: 10px;
 }
 .epTitle{
-    font-size: 20px;
+    font-size: 35px;
+    margin: 0px;
+    padding-top: 10px;
+}
+.epTitleSmall{
+    font-size: 25px;
+    margin: 0px;
+    padding-top: 10px;
+    padding-bottom: 15px;
 }
 .nextEpisodeWidget{
     width: 32.5%;
@@ -123,6 +146,7 @@ url('https://fonts.googleapis.com/css?family=Raleway:300,400,700,900');
     align-items: center;
     overflow: hidden;
     max-height: 750px;
+    
 }
 .nextEpisodeWidget:last-child{
     margin-right: 0px;
@@ -132,16 +156,18 @@ url('https://fonts.googleapis.com/css?family=Raleway:300,400,700,900');
     
     max-height: 750px;
     overflow: scroll;
+    margin: 0px;
 
 }
 .nextEpisodeWidget img{
     float: top;
     padding-right: 7px;
     padding-left: 7px;
-    height: 175px;
-    width: 175px;
+    height: 150px;
+    width: 150px;
     border-radius: 50px;
     padding: 7px;
+    margin: 0px;
 }
 
 /* Containers that contains items listed in rows*/
@@ -171,7 +197,7 @@ url('https://fonts.googleapis.com/css?family=Raleway:300,400,700,900');
     bottom: 0;
     right: 0;
     padding-right: 10px;
-    margin: 5px;
+    margin: 2px;
     background: #b03a3a;
 }
 .twitter-follow-button{
@@ -216,6 +242,9 @@ url('https://fonts.googleapis.com/css?family=Raleway:300,400,700,900');
   border-radius: 15px; 
   margin:  10px;
   
+}
+.MarginAuto{
+    margin: auto;
 }
 .epTitle{
 
@@ -473,6 +502,9 @@ p:last-of-type{
         
     }
     .nextEpisodeWidget{
+        width: 100%;
+    }
+    episodedetail{
         width: 100%;
     }
     .centered{
