@@ -72,6 +72,7 @@ Extend recent episodes to span both columns. Create two columns within that box 
         <section class="grd_col flex-container" id="gridWidgets" style="background:#5e5e5e">
             <!--
             <div class="episode_Widget">
+                
                 <h2><a href="episode.html?episodeNum=1"><img class="img" src="img/Episode_Thumbnails/SoPadme_ep.jpg" width="150" height="150"></a>
                     <a href="episode.html?episodeNum=1" style="text-decoration: none">So Padme, why did you choose Anakin? Feat. Comic Books Couples Counseling</a>
                     <hr style=" margin: 2px;" color="black">
@@ -88,6 +89,7 @@ Extend recent episodes to span both columns. Create two columns within that box 
                     </p>
                 </h2>
                 <div class="episode_DateTime">10/23/20 | 1hr 35min</div>
+                <span class="circle">999</span>
             </div>
             
             <div class="episode_Widget">
@@ -309,7 +311,8 @@ $(document).ready(function() {
         
         const items = data.querySelectorAll("item");
         let html = ``;
-        items.forEach(el => {
+        var count = items.length;
+        items.forEach(el => {  
         //Time
         var date = new Date(null);
         var sec = el.querySelector("duration").innerHTML.replace( /(<([^>]+)>)/ig, '').replace("<![CDATA[", "").replace("]]>", ""); // specify value for SECONDS here
@@ -338,7 +341,8 @@ $(document).ready(function() {
           + "<p> "
           + description
           + "</p> </h2>"
-          + "<div class =\"episode_DateTime\">" + formattedPubDate + "<div>"
+          + "<span class=\"circle\">" + count + "</span>"
+          + "<div class =\"episode_DateTime\">" + formattedPubDate + "<div>"     
            $(latestEpisode).appendTo("#latestEpisode"); 
         }
         else{
@@ -350,10 +354,11 @@ $(document).ready(function() {
             + "<p> "
             + description
             + "</p> </h2>"
+            + "<span class=\"circle\">" + count + "</span>"
             + "<div class =\"episode_DateTime\">" + formattedPubDate + "<div>"
             $(episode).appendTo("#gridWidgets");            
         }
-
+        count--;
         
 
         });
