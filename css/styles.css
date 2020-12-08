@@ -90,13 +90,31 @@ url('https://fonts.googleapis.com/css?family=Raleway:300,400,700,900');
 
   /* Details of epsiode on episode.html*/
   .episodeDetails {
+      position: relative;
     text-align: center;
     margin-bottom: 20px;
     margin:10px;
   }
+  .episodeDetails p{
+      margin: 10px;
+
+  }
+  .episodeDetails .circle{
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    width: 40px;
+    height: 30px;
+    -webkit-border-radius: 25px;
+    -moz-border-radius: 25px;
+    border-radius: 25px;
+    background: black;
+    color: white;
+    font-size: 20px;
+  }
 
   .episode_Widget .circle {
-position: absolute;
+    position: absolute;
     top: 10px;
     left: 5px;
     width: 40px;
@@ -112,6 +130,21 @@ position: absolute;
     margin: 0px;
     background: black;
     color: white;
+}
+
+
+.nextEpisodeWidget .circle{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 40px;
+    height: 30px;
+    -webkit-border-radius: 25px;
+    -moz-border-radius: 25px;
+    border-radius: 25px;
+    background: black;
+    color: white;
+    font-size: 20px;
 }
 
 .episodeDetails img{
@@ -157,6 +190,8 @@ position: absolute;
     font-size: 25px;
     margin: 0px;
     padding-top: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
     padding-bottom: 15px;
 }
 .nextEpisodeWidget{
@@ -165,8 +200,10 @@ position: absolute;
     margin-bottom: 20px;
     margin-right: 10px;
     align-items: center;
-    overflow: hidden;
+
     max-height: 750px;
+    position:relative;
+    padding-top: 15px;
     
 }
 .nextEpisodeWidget:last-child{
@@ -475,8 +512,15 @@ p:last-of-type{
         width: 95vw;
         height: fit-content;
         max-height: fit-content;
+        overflow: hidden;
 
     }
+    .episode_Widget p:before {
+
+        background:none
+        
+        
+      }
     .latestEpisodes{
         width: 60vw;
     }
@@ -521,10 +565,12 @@ p:last-of-type{
         width: 100%;  
     }
     .nextEpisodeWidget{
-        width: 100%;
+        width: 92%;
+        margin-right: 0px;
     }
     .episodeDetails{
-        width: 92%;
+        width: 90%;
+        scroll-behavior: none;
     }
     .centered{
         margin: auto;
